@@ -1,7 +1,3 @@
-Perfect. Here is a **ready-to-paste `README.md`** formatted exactly for GitHub.
-
----
-
 # Sudoku Master
 
 ### A Guided Sudoku Learning Engine in C++
@@ -149,7 +145,4 @@ This project explores how algorithmic systems can move beyond solving problems t
 
 Sudoku Master focuses on improving the solving process rather than simply producing solutions.
 
----
-
-If you want, I can also give you a short GitHub repo tagline for the About section.
 
