@@ -167,15 +167,15 @@ Tested for:
 ![Initial Grid](screenshots/initial.png)
 
 ### 4. Gameplay Feedback
-![Color-coded Feedback](screenshots/colored feedback.png)
-![Locked Cell Protection](screenshots/locked cell.png)
+![Color-coded Feedback](screenshots/colored-feedback.png)
+![Locked Cell Protection](screenshots/locked-cell.png)
 
 ### 5. Hint System
-![Reveal Cell Hint](screenshots/reveal cell hint.png)
-![Colored Hint](screenshots/colored hint.png)
+![Reveal Cell Hint](screenshots/reveal-cell-hint.png)
+![Colored Hint](screenshots/colored-hint.png)
 
 ### 6. Game Outcomes
-![Win or Quit](screenshots/win or quit.png)
+![Win or Quit](screenshots/win-or-quit.png)
 
 ---
 ## Conclusion
