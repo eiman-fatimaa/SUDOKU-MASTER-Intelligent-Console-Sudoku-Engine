@@ -1,110 +1,69 @@
 # Sudoku Master
 
 ### A Guided Sudoku Learning Engine in C++
+Sudoku Master is a console-based interactive Sudoku game developed in C++ 
+It automatically generates a valid 9×9 Sudoku puzzle using a backtracking algorithm and allows users to solve it through coordinate-based input. 
+The system validates every move, prevents illegal changes, provides color-coded feedback, and determines win or loss conditions based on correctness, time, score, and lives.
 
-Most Sudoku projects focus on solving the puzzle.
-
-Sudoku Master focuses on helping the player solve it better.
-
-This is a console-based intelligent Sudoku system built in C++ that combines puzzle generation, guided gameplay feedback, performance scoring, and structured interaction to create a learning-driven experience instead of simple trial-and-error play.
-
----
-
-## Why This Is Not Just Another Sudoku Solver
-
-In Sudoku, a move can satisfy all rules and still be wrong.
-
-Beginners often build incorrect logic without realizing it.
-
-Sudoku Master introduces a **color-based feedback layer** that evaluates how close a move is to the actual solution, even when the move is technically valid.
-
-| Feedback | Meaning                |
-| -------- | ---------------------- |
-| Green    | Correct placement      |
-| Yellow   | Close to correct value |
-| Red      | Incorrect direction    |
-
-This allows players to understand their logical progress without directly revealing answers.
-
-Instead of rejecting mistakes, the system guides improvement.
-
+This project is not just another Sudoku solver. It is a learning-driven gameplay engine designed to guide beginners and improve logical reasoning through visual feedback and scoring.
 ---
 ## Project Demo
 Watch full video demo:
 
 [![Sudoku Master Demo](https://img.youtube.com/vi/5mbaCIJDjoY/hqdefault.jpg)](https://www.youtube.com/watch?v=5mbaCIJDjoY)
+---
+## Why This Project Exists
+Traditional Sudoku puzzles are solved manually, which can be time-consuming and error-prone, especially for beginners. 
+Players often struggle to detect rule violations without external help.
 
-
-
+Sudoku Master addresses these challenges by:
+- Generating unique puzzles automatically for different difficulty levels.
+- Validating every move against Sudoku rules.
+- Preventing edits to fixed cells.
+- Providing hints and color-coded feedback.
+- Verifying the final solution using an automated solver
+---
 ## Key Features
-
-### Intelligent Gameplay Feedback
-
-Moves are analyzed relative to the solution.
-
-Players receive insight into correctness direction rather than simple rule validation.
-
+1. **Automatic puzzle generation** using backtracking.
+2. **Random removal of cells** to create playable puzzles.
+3. **Difficulty levels** (Easy, Medium, Hard) with adjusted removed cells and lives.
+4. **Coordinate-based input** for row, column, and value.
+5. **Locked cells** cannot be edited.
+6. **Rule validation** for rows, columns, and 3×3 subgrids.
+7. **Color-coded feedback**:
+   * Green → Correct placement
+   * Orange → Close (±1 or ±2)
+   * Red → Far from correct value
+8. Overwrite previous entries (except locked cells).
+9. **Hint system** reveals a random empty cell with score penalty.
+10. **Timer and scoring system** with penalties for slow play, invalid moves, and hint usage.
+11. **User authentication** with login, signup, and attempt tracking.
+12. **Game win/loss detection** with final statistics display.
+---
+## Programming Concepts Used:
+* Loops for grid display and validation
+* Conditional statements for rule enforcement and feedback
+* Functions for modular design
+* 2D arrays for puzzle, solution, and user grid
+* Backtracking algorithm for puzzle generation
+* Random number generation
+* File handling for user authentication
+* Console formatting and ANSI color codes
+* Input validation
 ---
 
-### Beginner-Oriented Hint Philosophy
+## System Design and Implementation
 
-Hints are designed to support learning, not replace thinking.
+**Sudoku Generation:** `generateFullGrid()` fills the grid using `isSafe()`
+**Puzzle Creation:** Cells removed randomly based on difficulty level
+**User Interaction:** Moves entered as row, column, and value
+**Invalid Input Handling:** Immediate rejection and feedback
+**Overwrite Handling:** Users can update their entries; locked cells cannot be modified
+**Scoring & Timer:**
 
-The system helps players avoid progressing with flawed logic.
-
----
-
-### Dynamic Puzzle Generation
-
-Each session generates a new puzzle using recursive backtracking with randomized placement.
-
-Difficulty levels adjust challenge by removing different numbers of cells:
-
-| Level  | Cells Removed | Lives |
-| ------ | ------------- | ----- |
-| Easy   | 30            | 100   |
-| Medium | 40            | 35    |
-| Hard   | 55            | 20    |
-
----
-
-### Structured Console Interface
-
-Special attention was given to terminal readability:
-
-* Symmetrical grid layout
-* Subgrid separation
-* Consistent alignment
-* Color-based visual feedback
-
----
-
-### Performance-Based Scoring
-
-The scoring system evaluates solving quality using:
-
-* Time taken
-* Invalid moves
-* Hint usage
-* Logical accuracy
-
-Completion alone does not guarantee a high score.
-
----
-
-### Timer-Based Gameplay
-
-Real-time tracking evaluates performance and introduces penalties for slow solving.
-
----
-
-### User Authentication
-
-Includes file-based:
-
-* Signup
-* Login
-* Attempt tracking
+* Base score 1000
+* Penalties for invalid moves, hints, and time exceeding 3 minutes
+* Score increments for valid moves
 
 ---
 
@@ -124,31 +83,45 @@ Example:
 
 ---
 
-## Technical Concepts Used
+## Expected Outcome
 
-* Recursive Backtracking
-* Constraint Validation
-* Randomized Generation
-* ANSI Color Rendering
-* File Handling
-* State Tracking
-* Input Validation
-* Time-Based Evaluation
+Upon execution, the user:
+
+* Logs in or signs up successfully
+* Selects a difficulty level
+* Sees a **neatly formatted Sudoku grid**
+* Receives **real-time validation and color-coded feedback**
+* Uses hints strategically
+* Completes the puzzle or reaches a game-over condition
+* Receives a final score and completion message
 
 ---
 
-## Repository Includes
+## Testing and Validation
 
-* Source Code
-* System Flowchart
-* Gameplay Demo Video
+The system has been tested for:
+
+* Input validation (invalid row, column, or value)
+* Non-numeric input handling
+* Rule violation detection
+* Locked cell protection
+* Overwriting user entries
+* Hint system functionality
+* Difficulty level correctness
+* Timer and scoring accuracy
+* Game win and loss conditions
+* User authentication and attempt tracking
+---
+
+## Additional Materials
+
+* [Flowchart](docs/flowchart.pdf) — System design and logic flow
+* [Project PPT](docs/project_demo.pptx) — Contributions, screenshots, and feature overview
 
 ---
 
 ## Objective
 
-This project explores how algorithmic systems can move beyond solving problems to guiding human decision making.
+Sudoku Master fulfills its goal of creating a **user-friendly, interactive Sudoku system** that handles errors effectively while teaching logical reasoning.
 
-Sudoku Master focuses on improving the solving process rather than simply producing solutions.
-
-
+It demonstrates strong knowledge of **C++ fundamentals, problem solving techniques, and modular programming**. The **scoring, color feedback, hints, and authentication** enhance usability and learning value, making it more than just a puzzle solver.
