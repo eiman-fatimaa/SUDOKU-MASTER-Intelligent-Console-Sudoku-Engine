@@ -29,6 +29,10 @@ This allows players to understand their logical progress without directly reveal
 Instead of rejecting mistakes, the system guides improvement.
 
 ---
+## Project Demo
+
+[![Watch the Demo](https://img.youtube.com/vi/5mbaCIJDjoY.jpg)](https://www.youtube.com/watch?v=5mbaCIJDjoY)
+
 
 ## Key Features
 
