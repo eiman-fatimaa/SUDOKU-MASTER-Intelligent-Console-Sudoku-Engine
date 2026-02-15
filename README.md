@@ -31,7 +31,10 @@ Instead of rejecting mistakes, the system guides improvement.
 ---
 ## Project Demo
 
-[![Watch the Demo](https://img.youtube.com/vi/5mbaCIJDjoY.jpg)](https://www.youtube.com/watch?v=5mbaCIJDjoY)
+## Project Demo
+
+[![Sudoku Master Demo](https://img.youtube.com/vi/5mbaCIJDjoY/hqdefault.jpg)](https://www.youtube.com/watch?v=5mbaCIJDjoY)
+
 
 
 ## Key Features
