@@ -154,7 +154,30 @@ Tested for:
 - [Project PPT](docs/project_presentation.pdf) — Contributions, feature overview, and screenshots  
 
 ---
+## Screenshots
 
+### 1. User Authentication
+![Signup/Login](screenshots/signup,login.png)
+
+### 2. Instructions and Difficulty Selection
+![Instructions](screenshots/instructions.png)
+![Difficulty Levels](screenshots/levels.png)
+
+### 3. Initial Sudoku Grid
+![Initial Grid](screenshots/initial.png)
+
+### 4. Gameplay Feedback
+![Color-coded Feedback](screenshots/colored feedback.png)
+![Locked Cell Protection](screenshots/locked cell.png)
+
+### 5. Hint System
+![Reveal Cell Hint](screenshots/reveal cell hint.png)
+![Colored Hint](screenshots/colored hint.png)
+
+### 6. Game Outcomes
+![Win or Quit](screenshots/win or quit.png)
+
+---
 ## Conclusion
 
 Sudoku Master demonstrates **full-stack C++ console programming**, integrating:  
